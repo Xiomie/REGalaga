@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
-{
-    public Transform shooting;
-    public float shootSpeed = 20f;
-    public float shootTime = 0;
-    void Start()
+ 
+{  
+    public Animator animator;
+    void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Jump"))
         {
-            shoot();
+            animator.SetBool("Shoot", true);
+
         }
+        else
+            animator.SetBool("Shoot" , false);
     }
 
-    // Update is called once per frame
-    void shoot()
-    {
-        
-    }
 }
