@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public LaunchProjectile1 ProjectilePrefab;
+    public Transform LaunchOffset;
 
     public CharacterController controller;
     public float speed = 2.0f;
@@ -29,5 +31,10 @@ public class PlayerMovement : MonoBehaviour
             + (transform.right * speed * inputX * Time.deltaTime);
 
         controller.Move(motion);
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
     }
 }
