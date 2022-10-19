@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 
@@ -22,15 +22,12 @@ public class PauseMenuScript : MonoBehaviour
     {
         if (Input.GetKeyDown(testingKey))
         {
-            testingText.text = "Down";
         }
         else if (Input.GetKey(testingKey))
         {
-            testingText.text = "Hold";
         }
         else if (Input.GetKeyUp(testingKey))
         {
-            testingText.text = "Up";
         }
         else
         {
@@ -55,6 +52,7 @@ public class PauseMenuScript : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
 
     public void LoadLevel(string sceneName)
     {
