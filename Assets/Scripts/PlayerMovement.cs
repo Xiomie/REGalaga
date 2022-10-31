@@ -69,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCoolCounter -= Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        TrailRenderer.FindObjectOfType<TrailRenderer>();
     }
 
 }
