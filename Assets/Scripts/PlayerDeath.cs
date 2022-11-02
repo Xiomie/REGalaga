@@ -11,5 +11,13 @@ public class PlayerDeath : MonoBehaviour
             LevelManager.instance.GameOver();
             gameObject.SetActive(false);
         }
+
+        
+        if (collision.gameObject.tag == "Projectile")
+         {
+             LevelManager.instance.GameOver();
+             gameObject.SetActive(false);
+         }
+        
     }
 }
